@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Ordering website</title>
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: tomato;
+        }
+       .list{
+           display: flex;
+       }
+       .list li{
+           padding: 12px;
+           list-style: none;
+           font-family: Bahnschrift Light;
+       }
+       .list li a{
+           text-decoration: none;
+           color: white;
+           
+       }
+       .list li a:hover{
+           background-color: white;
+           border-radius: 10px;
+           color: black;
+       }
+       .home{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+           margin-top: 68px;
+       }
+       .home::before{
+           content: "";
+           background: url('strawberry.jpg') center center/cover;
+           position: absolute;
+           width: 100%;
+           height: 100%;
+           z-index:-1;
+       }
+       .heading{
+           color: white;
+           font-family: Bree Serif;
+           font-size: 50px;
+
+       }
+       .home p{
+           color: white;
+           font-family: 20px;
+           font-family: Bree Serif;
+           margin-top: -12px;
+       }
+       .order{
+           width: 400px;
+           height: 46px;
+           background-color: #fa8e416b;
+           color: white;
+           font-size: 20px;
+           cursor: pointer;
+       }
+       .headline{
+           margin-top: 300px;
+           text-align: center;
+           font-size: 60px;
+           font-family: Bree serif;
+           color: white;
+
+       }
+       .box{
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           width: 100%;
+           height: 600px;
+           border: 2px solid #ffe6ad;
+           border-top-left-radius: 125px;
+           border-bottom-right-radius: 125px;
+           margin-top: 60px;
+           background-color: #ffe6ad;
+       }
+       
+       #container{
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           width: 400px;
+           height: 500px;
+           border: 2px solid green;
+           border-top-left-radius: 30px ;
+           border-bottom-right-radius: 30px;
+           margin: 20px;
+           background-color: #e7ffd7;
+          
+       }
+       .burger{
+           width: 300px;
+           height: 300px;
+           margin-top: 10px;
+           
+       }
+       .salad{
+           width: 300px;
+           height: 200px;
+           margin-top: 10px;
+           
+       }
+       .fruits{
+           width: 300px;
+           height: 200px;
+           margin-top: 10px;
+           
+       }
+       #container p{
+           text-align: center;
+           font-family: Bree Serif;
+       }
+       .clientheading{
+           text-align: center;
+           font-family: Bree Serif;
+           font-size: 30px;
+           color: white;
+       }
+      
+
+       .member{
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           width: 100%;
+           height: 500px;
+           border: 2px solid grey;
+           border-top-right-radius: 125px;
+           border-bottom-left-radius: 125px;
+           background-color: grey;
+       }
+       #client{
+           width: 400px;
+           height: 200px;
+           
+           margin: 20px;
+       }
+       .apple{
+           height: 300px;
+           width: 300px;
+           margin-top: 10px;
+       }
+       .google{
+           height: 300px;
+           width: 300px;
+           margin-top: 10px;
+       }
+       .microsoft{
+           height: 300px;
+           width: 300px;
+           margin-top: 10px;
+       }
+       .join{
+           text-align: center;
+           font-family: Bree serif;
+           font-size: 30px;
+           color: white;
+       }
+       .form{
+           width: 100%;
+           height: 600px;
+           border: 2px solid  #042026;
+           border-top-right-radius:  132px;
+           border-bottom-left-radius: 132px;
+           background-color: #042026;
+       }
+       .contactUs{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+       }
+       input{
+           width: 500px;
+           height: 30px;
+           background-color: #042026;
+           color: white;
+           margin-top: 20px;
+       }
+       button{
+           width: 500px;
+           height: 56px;
+           font-size: 30px;
+           font-family: Bree serif;
+           background-color: rgb(1, 148, 92);
+           color: white;
+       }
+       :placeholder-shown{
+           color: white;
+           text-align: center;
+           font-size: 20px;
+       }
+       .top{
+           margin-top: 91px;
+       }
+
+       @media (max-width: 1021px){
+           .home{
+               align-items: center;
+               justify-content: center;
+           }
+           .home::before{
+               background: url('https://cdn.pixabay.com/photo/2016/12/26/17/28/food-1932466_1280.jpg') center center/cover;
+           }
+           .heading{
+               text-align: center;
+               font-size: 30px;
+           }
+           .home p{
+               text-align: center;
+           }
+           .list{
+               justify-content: center;
+               align-items: center;
+           }
+           .order{
+               width: 200px;
+           }
+           .box{
+               flex-direction: column;
+               align-items: center;
+               justify-content: center;
+               height: 1500px;
+               
+           }
+           
+           #container{
+               margin: 20px;
+               width: 300px;
+               height: 1000px;
+               
+           }
+           .clientheading{
+               text-align: center;
+           }
+           .member{
+               flex-direction: column;
+               align-items: center;
+               justify-content: center;
+               height: 1000px;
+
+           }
+           #client{
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               margin: 20px;
+               width: 300px;
+               
+               
+           }
+           .apple{
+               margin-top:-201px;
+               width:300px ;
+               height: 300px;
+           }
+           .google{
+               margin-top:1px;
+               width: 300px;
+               height: 300px;
+           }
+           .microsoft{
+               margin-top: 200px;
+               width: 300px;
+               height: 300px;
+           }
+           
+           .contactUs{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+           }
+           input{
+               width:  325px;
+              
+           }
+           button{
+               width: 325px;
+               height: 56px;
+               font-size: 30px;
+           }
+
+           
+       }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <ul class="list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About Us</a></li>
+            
+        </ul>
+    </nav>
+    <section class="home">
+        <h1 class="heading">Welcome to the OnlineMeal</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, quisquam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <button class="order">Order Now</button>
+    </section>
+    <section class="services">
+           <h1 class="headline">Our Services</h1>
+           <div class="box">
+               <div id="container">
+                   <img src="https://i0.wp.com/freepngimages.com/wp-content/uploads/2016/11/bacon-burger.png?fit=624,624" alt="" class="burger">
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia esse error ipsum similique, adipisci ratione porro non dolorum, nisi maiores fugiat tempora eos, enim iusto. Ullam nemo nam iste fugiat repellat dolorem tempore fuga!
+                   </p>
+               </div>
+               <div id="container">
+                   <img src="http://www.pngmart.com/files/1/Grilled-Chicken-Caesar-Salad-PNG.png" alt="" class="salad">
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia esse error ipsum similique, adipisci ratione porro non dolorum, nisi maiores fugiat tempora eos, enim iusto. Ullam nemo nam iste fugiat repellat dolorem tempore fuga!</p>
+               </div>
+               <div id="container">
+                <img src="http://images.clipartpanda.com/sandwich-clipart-burger_sandwich_PNG4120.png" alt="" class="fruits">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia esse error ipsum similique, adipisci ratione porro non dolorum, nisi maiores fugiat tempora eos, enim iusto. Ullam nemo nam iste fugiat repellat dolorem tempore fuga!</p>
+               </div>
+           </div>
+    </section>
+    <section class="clients">
+        <h1 class="clientheading">Our Main Clients</h1>
+        <div class="member">
+            <div id="client">
+                <img src="https://diylogodesigns.com/wp-content/uploads/2016/04/Apple-Logo-Png-Download.png" alt="" class="apple">
+            </div>
+            <div id="client">
+                <img src="https://cdn.pixabay.com/photo/2015/12/11/11/43/google-1088004_640.png" alt="" class="google">
+            </div>
+            <div id="client">
+                <img src="https://www.freepnglogos.com/uploads/microsoft-logo-png-hd-6.png" alt="" class="microsoft">
+            </div>
+        </div>
+       
+    </section>
+    <section>
+        <h1 class="join">Join with Us</h1>
+        <div class="form">
+            <form action="" class="contactUs">
+            
+                <input type="text" placeholder="First Name" class="top"><br>
+                <input type="text" placeholder="Last Name"><br>
+                <input type="email" placeholder="Email Address"><br>
+                <input type="password" placeholder="Enter your Password"><br>
+                <input type="number" placeholder="Enter your Mobile Number"><br>
+                <button>
+                    Sumbit
+                </button>
+                                     
+
+            </form>
+        </div>
+    </section>
+</body>
+</html>
